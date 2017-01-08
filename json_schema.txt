@@ -1,0 +1,6 @@
+MESSAGE
+{
+    "message" : "",
+    "sender" : "",
+    "recipient" : "",
+}

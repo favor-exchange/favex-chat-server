@@ -1,0 +1,17 @@
+{
+  "name": "favex-chat-server",
+  "main": "server.js",
+  "dependencies": {
+    "morgan": "latest",
+    "socket.io": "latest",
+    "mongodb" : "latest",
+    "express": "latest",
+    "socket.io-client" : "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts":{
+    "dev": "nodemon server.js"
+  }
+}
