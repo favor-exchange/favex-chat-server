@@ -33,7 +33,8 @@ io.on('connection', function (socket) {
                     db.close();
                     return;
                 }
-                socket.emit('stored messages', docs[0]);
+                console.log(docs);
+                socket.emit('stored messages', docs);
                 db.close();
             });
         });
@@ -43,8 +44,11 @@ io.on('connection', function (socket) {
     });
 
     socket.on('new message', function (data) {
-        var clients = io.sockets.clients(data.recipient);
-        if (clients.length === 0) {
+
+        var clients = io.sockets.adapter.rooms[data.recipient];
+        
+        if (clients == undefined) {
+            console.log("no users in room")
             mongo.connect(dburl, function (err, db) {
                 if (err) {
                     console.log(err);

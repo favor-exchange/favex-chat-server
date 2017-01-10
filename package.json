@@ -2,7 +2,6 @@
   "name": "favex-chat-server",
   "main": "server.js",
   "dependencies": {
-    "morgan": "latest",
     "socket.io": "latest",
     "mongodb" : "latest",
     "express": "latest",
